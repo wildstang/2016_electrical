@@ -1,0 +1,43 @@
+Partlist
+
+Exported from RobotLEDBoard.sch at 2/4/2015 12:23:42 PM
+
+EAGLE Version 7.1.0 Copyright (c) 1988-2014 CadSoft
+
+Assembly variant: 
+
+Part     Value          Device                Package            Library                    Sheet
+
+C1       0.1uF          CAP0603-CAP           0603-CAP           SparkFun-Passives          1
+C2       0.1uF          CAP0603-CAP           0603-CAP           SparkFun-Passives          1
+C3       0.1uF          CAP0603-CAP           0603-CAP           SparkFun-Passives          1
+C4       0.01uf         CC0402                C0402              eagle-ltspice              1
+C5       33pf           CC0201                C0201              eagle-ltspice              1
+C8       0.1uf          CC0603                C0603              eagle-ltspice              1
+C10      0.1uf          CC0603                C0603              eagle-ltspice              1
+D2       D13            LED-RED0603           LED-0603           SparkFun-LED               1
+D3       RX             LED-GREEN0603         LED-0603           SparkFun-LED               1
+D4       TX             LED-RED0603           LED-0603           SparkFun-LED               1
+IC1      MSGEQ7         MSGEQ7                DIP08              SparkFun-AnalogIC          1
+JP1      FTDI Basic     M06SIP                1X06               SparkFun-Connectors        1
+JP2                     M05PTH                1X05               SparkFun-Connectors        1
+JP3      ICSP           PINHD-2X3             2X03               SparkFun-Connectors        1
+JP4                     M03PTH                1X03               SparkFun-Connectors        1
+JP5      Mic in         M03PTH                1X03               SparkFun-Connectors        1
+JP6                     M04PTH                1X04               SparkFun-Connectors        1
+JP7                     M04PTH                1X04               SparkFun-Connectors        1
+JP8                     M04PTH                1X04               SparkFun-Connectors        1
+JP10                    M03PTH                1X03               SparkFun-Connectors        1
+JP15                    M04PTH                1X04               SparkFun-Connectors        1
+JP16                    M04PTH                1X04               SparkFun-Connectors        1
+R1       10k            RESISTOR0603-RES      0603-RES           SparkFun-Passives          1
+R2       10k            RESISTOR0603-RES      0603-RES           SparkFun-Passives          1
+R3       1k             RESISTORAXIAL-0.3     AXIAL-0.3          SparkFun-Resistors         1
+R4       10k            RESISTOR0603-RES      0603-RES           SparkFun-Passives          1
+R5       10k            RESISTOR0603-RES      0603-RES           SparkFun-Passives          1
+R7       1.34k          RESISTORAXIAL-0.3     AXIAL-0.3          SparkFun-Resistors         1
+R8       200k           R-US_M1206            M1206              rcl                        1
+S1       Reset          SWITCH-MOMENTARY-2SMD TACTILE_SWITCH_SMD SparkFun-Electromechanical 1
+U$1      LSF-SMT        LSF-SMT               LSF-SMT            LSF-SMT                    1
+U1       ATMEGA328P     ATMEGA328_SMT         TQFP32-08          SparkFun-DigitalIC         1
+Y1       16MHz          RESONATOR16MHZ        RESONATOR-SMD      SparkFun-FreqCtrl          1
