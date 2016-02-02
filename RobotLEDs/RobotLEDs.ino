@@ -121,7 +121,7 @@ void loop()
       dataChanged = false;
       if (alliance == 1)
       {
-         scanner(255, 0, 0, 20, true);
+         scanner(255, 0, 0, 20, true); //Hi
       }
       else if (alliance == 2)
       {
