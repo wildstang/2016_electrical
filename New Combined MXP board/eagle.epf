@@ -370,7 +370,7 @@ UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-
 [Win_1]
 Type="Control Panel"
 Loc="249 273 1092 726"
-State=0
+State=2
 Number=0
 
 [Desktop]

@@ -1,0 +1,19 @@
+Partlist
+
+Exported from Hall Effect Sensor.sch at 2/4/2015 12:23:07 PM
+
+EAGLE Version 7.1.0 Copyright (c) 1988-2014 CadSoft
+
+Assembly variant: 
+
+Part     Value              Device             Package            Library             Sheet
+
+C1       0.1uF              CAP0603-CAP        0603-CAP           SparkFun-Passives   1
+C2       4.7nF              CAP0603-CAP        0603-CAP           SparkFun-Passives   1
+JP1                         M03PTH             1X03               SparkFun-Connectors 1
+LED1     Power              LED0603            LED-0603           SparkFun-LED        1
+LED2     Sig                LED0603            LED-0603           SparkFun-LED        1
+R1       10k                RESISTOR0603-RES   0603-RES           SparkFun-Passives   1
+R2       2k                 RESISTOR0603-RES   0603-RES           SparkFun-Passives   1
+R3       2k                 RESISTOR0603-RES   0603-RES           SparkFun-Passives   1
+U$1      US5881-HALL-EFFECT US5881-HALL-EFFECT US5881-HALL-EFFECT TPS5430             1

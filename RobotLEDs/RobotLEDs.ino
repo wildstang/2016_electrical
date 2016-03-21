@@ -20,7 +20,7 @@ This is a change.
 // This will use the following pins (SPI):
 // Data (SDA):  11
 // Clock (SCL): 13
-#define NUMPIXELS 30
+#define NUMPIXELS 12
 
 Adafruit_DotStar strip = Adafruit_DotStar(NUMPIXELS, 11, 13);
 
@@ -30,11 +30,18 @@ unsigned long trailPattern[TRAIL_LENGTH + 1];
 #define ALLIANCE_BLUE 0x47
 #define ALLIANCE_PATTERN 0x04
 #define AUTONOMOUS 0x02
+#define FLYWHEEL 0x05
+#define HOODUP 0x10
+#define SHOOT 0x06
+#define INTAKE 0x07
+#define CLIMB 0x08
+#define BAD 0x09
+
 
 // This the address to use for the arduino in slave mode when talking to the cRIO.
 // This number may differ from the address that the cRIO expects. Sniff the I2C lines
 // to check what address correlates to the actual integer given here
-static const byte i2cAddress = 0x12;
+static const byte i2cAddress = 0x10;
 
 // This boolean gets set when we have new data that has been verified to be correct following our checks
 boolean dataChanged = false;
@@ -87,6 +94,7 @@ void setup()
    // We call this last to avoid a nasty bug involving the LED initialization code
    Wire.begin(i2cAddress);
    Wire.onReceive(receiveData);
+  
 }
 
 
@@ -94,46 +102,52 @@ void setup()
 void loop()
 {
 
-   if ((commandByte == AUTONOMOUS) &&
-     (payloadByte1 == 0x2F) &&
-     (payloadByte2 == 0x12))
+   if (commandByte == FLYWHEEL)
    {
-      dataChanged = false;
-      autonomous();
-   }
-   else if (commandByte == ALLIANCE_PATTERN)
-   {
-     if (payloadByte1 == ALLIANCE_RED)
-     {
-      dataChanged = false;
-      allianceSelection(6);
-     }
-     else if (payloadByte1 == ALLIANCE_BLUE)
-     {
-      dataChanged = false;
-      allianceSelection(6);
-     }
-   }
-   else if ((commandByte == 0x08) &&
-     (payloadByte1 == 0x34) &&
-     (payloadByte2 == 0x45))
-   {
-      dataChanged = false;
-      if (alliance == 1)
+      if (dataChanged)
       {
-         scanner(255, 0, 0, 20, true);
+        colorBlink(250, 250, 0, 255, 0);
+        colorBlink(250, 250, 0, 255, 0);
+        colorBlink(250, 250, 0, 255, 0);
+        colorBlink(250, 250, 0, 255, 0);
       }
-      else if (alliance == 2)
-      {
-         scanner(0, 0, 255, 20, true);
-      }
-      rainbowWheel(3);
+      dataChanged = false;
+      colorFill(0, 255, 0);
+   }
+   else if (commandByte == SHOOT)
+   {
+      dataChanged = false;
+      colorFill(255, 255, 255);
+      timedWait(500);
+   }
+   else if (commandByte == INTAKE)
+   {
+      dataChanged = false;
+      scanner(0, 0, 255, 20, true);
+   }
+   else if (commandByte == CLIMB)
+   {
+      dataChanged = false;
+      scanner(200, 255, 0, 20, true);
+   }
+   else if (commandByte == HOODUP)
+   {
+      dataChanged = false;
+      colorFill(0, 255, 0);
+   }
+   else if (commandByte == BAD)
+   {
+      dataChanged = false;
+      colorBlink(250, 250, 255, 0, 0);
    }
    else
    {
       dataChanged = false;
-      rainbowWheel(3);
+//      rainbowWheel(3);
+  blankStrip();
    }
+   
+//   strip.setPixelColor(0, strip.Color(0, 0, 255));
 }
 
 void colorChase(unsigned long c, byte wait)
@@ -337,9 +351,9 @@ void receiveData(int byteCount)
     
     // Check if the payload bytes and the flipped counterparts are indeed opposite using XOR
     // If so, then set the bytes we actually use in loop()
-    if ((0xFF == (dataByte2 ^ dataByte4)) &&
-        (0xFF == (dataByte3 ^ dataByte5)))
-    {
+//    if ((0xFF == (dataByte2 ^ dataByte4)) &&
+//        (0xFF == (dataByte3 ^ dataByte5)))
+//    {
 //      Since data is being sent repeatedly to signify the start and end of a given state, this check
 //      cannot be used. Uncomment these three lines and the closing parenthesis if you want to
 //      check if the data is the same.
@@ -355,7 +369,7 @@ void receiveData(int byteCount)
        // Set the flag to say that we have new data
        dataChanged = true;
 //      }
-    }    
+//    }    
   }
   // This should clear out any packets that are bigger than the required 5 bytes
   else if (byteCount > 5) 
@@ -696,7 +710,7 @@ void allianceSelection(byte times)
          }
       }
    }
-   setDrivingState();
+//   setDrivingState();
 }
 
 void autonomous()

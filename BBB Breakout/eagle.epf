@@ -350,27 +350,11 @@ UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/zetex.lbr"
 UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/zilog.lbr"
 UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Capacitors.lbr"
 UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Connectors.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/LilyPad-Wearables.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Aesthetics.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-AnalogIC.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Boards.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-DigitalIC.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-DiscreteSemi.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Displays.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Electromechanical.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-FreqCtrl.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-LED.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Passives.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-PowerIC.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Resistors.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Retired.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-RF.lbr"
-UsedLibrary="C:/Program Files/EAGLE-7.1.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Sensors.lbr"
 
 [Win_1]
 Type="Control Panel"
 Loc="249 273 1092 726"
-State=0
+State=2
 Number=0
 
 [Desktop]
